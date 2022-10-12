@@ -30,6 +30,6 @@ jobs:
         run: |
           aws s3 sync . \                     # 객체 동기화 명령어
             --region ap-northeast-2 \       # region
-            build s3://fe-7-kosmos992 \     # 빌드
+            build s3://fe-7-kosmos992/path \     # 빌드
             --delete
         working-directory: ./my-agora-states-client
