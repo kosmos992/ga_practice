@@ -28,8 +28,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
         run: |
-          aws s3 sync . \                     # 객체 동기화 명령어
-            --region ap-northeast-2 \       # region
-            build s3://fe-7-kosmos992/path \     # 빌드
+          aws s3 sync s3://fe-7-kosmos992/path \  
+            --region ap-northeast-2 \       
+            build s3://fe-7-kosmos992/path \     
             --delete
         working-directory: ./my-agora-states-client
